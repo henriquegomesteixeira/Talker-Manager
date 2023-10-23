@@ -39,6 +39,17 @@ Este projeto é um Sistema de Gerenciamento de Palestrantes, é uma aplicação 
 
 - **Autenticação de Usuário:** Permite autenticar um usuário para obter um token de acesso.
 
+## Endpoints:
+- **GET /talker/db**: Obter palestrantes do banco de dados.
+- **GET /talker**: Obter uma lista de todos os palestrantes.
+- **GET /talker/search?q=palavraChave**: Buscar palestrantes com base em critérios específicos.
+- **GET /talker/:id**: Obter um palestrante específico por ID.
+- **POST /talker**: Adicionar um novo palestrante.
+- **PUT /talker/:id**: Atualizar um palestrante existente.
+- **DELETE /talker/:id**: Excluir um palestrante.
+- **PATCH /talker/rate/:id**: Atualizar a avaliação de um palestrante.
+- **POST /login**: Autenticação do usuário para obter um token de acesso.
+
 ## Como usar com Docker
 1. Inicie os containers:
 ```bash
@@ -84,4 +95,16 @@ Se encontrar o erro EADDRINUSE: address already in use 0.0.0.0:3001, execute o s
 ```bash
 killall -9 node
 ```
+
+## Testando a API
+Para testar a API e realizar solicitações, recomendo o uso de uma ferramenta de cliente HTTP, como o Insomnia ou o Thunder Client. Você pode escolher qualquer uma dessas ferramentas para começar a fazer solicitações à API.
+
+Exemplo de Uso com Thunder Client:
+1. Abra o Thunder Client no seu ambiente de desenvolvimento.
+2. Crie uma nova requisição.
+3. Selecione o método (GET, POST, PUT, etc.).
+4. Insira a URL da rota desejada (por exemplo: http://localhost:3000/talker).
+5. Adicione os parâmetros necessários no corpo da requisição (caso aplicável).
+6. Clique em "Enviar" para fazer a requisição.
+
 
